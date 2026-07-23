@@ -5,7 +5,7 @@ This repository contains test code for evaluating the performance of four mainst
 ## Directory Structure
 - `simulate_data_code/` – Contains scripts for generating simulated genotype data (`.txt` format) and ground‑truth ancestry labels.
 - `workflows/` – Automates the execution of all benchmarking tests.
-- `real_data_code/` – Automates data processing for real data.
+- `real_data_code/` – Automatically extracts and processes real data, calling VCF format conversion.
 
 ## Dependencies
 
@@ -34,7 +34,7 @@ Refer to each software’s official documentation for installation instructions.
 Visualisation Software
 ancestryView213: Used to plot sample ancestry composition.
 
-Quick Start
+## Quick Start
 Generate simulated data:
 
 bash
@@ -47,14 +47,11 @@ When testing robustness with simulated data, you can run the software directly w
 
 Generate plots: Use ancestryView213 to visualise the results.
 
-Real data:
-auto_run.py – Automatically extracts and processes real data, calling VCF format conversion.
-
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Citation
+## Citation
 If you use this code in your research, please cite: Author(s), Title of the paper, Journal, Year (to be updated)
 
-Contact
+## Contact
 For questions, please contact: 2112531015@stu.gdpu.edu.cn
