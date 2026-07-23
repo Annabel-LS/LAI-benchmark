@@ -1,82 +1,63 @@
 # Ancestry Inference Software Benchmarking – Code Repository
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-
-This repository provides a standardized test framework for evaluating the performance of four mainstream ancestry inference software tools: **amap**, **flare**, **salai‑net**, and **rfmix**. The benchmarking suite assesses computational efficiency (impacted by SNP count, sample size, and multi‑way admixture levels), accuracy across varying admixture generations, and robustness under different scenarios.
-
----
-
-## Table of Contents
-
-- [Directory Structure](#directory-structure)
-- [Dependencies](#dependencies)
-  - [System Requirements](#system-requirements)
-  - [Python Dependencies](#python-dependencies)
-  - [Third‑Party Software](#thirdparty-software)
-- [Quick Start](#quick-start)
-- [License](#license)
-- [Citation](#citation)
-- [Contact](#contact)
-
----
+This repository contains test code for evaluating the performance of four mainstream ancestry inference software tools (amap, flare, salai‑net, rfmix). The evaluation covers computational speed (influenced by the number of SNPs, number of samples, and multi‑way admixture), accuracy across different admixture generations, and robustness.
 
 ## Directory Structure
+- `simulate_data_code/` – Contains scripts for generating simulated genotype data (`.txt` format) and ground‑truth ancestry labels.
+- `workflows/` – Automates the execution of all benchmarking tests.
+- `real_data_code/` – Automatically extracts and processes real data, calling VCF format conversion.
 
-```text
-.
-├── simulate_data_code/          # Scripts for generating simulated genotype data (.txt) and ground‑truth ancestry labels
-├── workflows/                    # Automation scripts for executing all benchmarking tests
-└── real_data_code/               # Utilities for extracting and processing real‑world data (including VCF format conversion)
-Dependencies
-System Requirements
-Operating system: Linux
+## Dependencies
 
-Python version: 3.8 or higher
+### System Requirements
+- Python 3.8+
+- Operating system: Linux
 
-Python Dependencies
-Install the required Python libraries using:
+### Python Dependencies
+Install the required libraries:
+```bash
 pip install matplotlib numpy pandas
-
 Third‑Party Software
-The benchmarking scripts rely on the following external tools. Please install them according to their official documentation before running the tests.
-Software	Version / Source
-amap	1.6
-flare	JAR (latest)
-salai‑net	Git repository
-rfmix	Git repository
-ancestryView213	2.13_1.4.0
-Note: ancestryView213 is used for visualizing sample ancestry composition.
+The benchmarking scripts in this repository use the following software. Please ensure they are installed before running the tests:
+
+-amap:
+    --https://github.com/Annabel-LS/LAI-benchmark/releases/tag/1.6
+
+-flare:
+    --https://faculty.washington.edu/browning/flare.jar.
+
+-salai‑net:
+    --https://github.com/AI-sandbox/SALAI-Net.git.
+
+-rfmix:
+    --https://github.com/slowkoni/rfmix.
+-ancestryView213:
+    --https://github.com/Annabel-LS/LAI-benchmark/releases/tag/2.13_1.4.0
+
+Refer to each software’s official documentation for installation instructions.
+
+Visualisation Software
+ancestryView213: Used to plot sample ancestry composition.
 
 Quick Start
-Follow these steps to set up and run the benchmarking tests.
-
-1. Generate Simulated Data
-Run the following script to generate simulated genotype data and corresponding ground‑truth labels:
+Generate simulated data:
 
 bash
 python3 get_childrenV2.py
-2. Run Benchmarking Tests
-Place the test scripts for each software in their respective software folders and adjust the parameter paths accordingly.
-
-For example, the test script for evaluating the relationship between computational speed and the number of SNPs is located at:
-
-text
+Run all tests:
+Place the test scripts for each software in their respective software folders and modify the parameter paths. For example, the test script for evaluating the relationship between computational speed and number of SNPs is located at:
 /aMAP_20140601_binary/test_SNP
-When testing robustness with simulated data, you can execute the software directly without using the workflow scripts.
 
-3. Visualize Results
-Use ancestryView213 to generate plots of sample ancestry composition from the output files.
+When testing robustness with simulated data, you can run the software directly without the workflow.
 
-License
+Generate plots: Use ancestryView213 to visualise the results.
+```
+
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Citation
-If you use this code in your research, please cite:
+## Citation
+If you use this code in your research, please cite: Author(s), Title of the paper, Journal, Year (to be updated)
 
-Author(s). Title of the paper. Journal, Year. (To be updated)
-
-Contact
-For questions or feedback, please contact:
-
-Email: 2112531015@stu.gdpu.edu.cn
+## Contact
+For questions, please contact: 2112531015@stu.gdpu.edu.cn
