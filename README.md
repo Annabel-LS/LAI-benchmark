@@ -20,20 +20,11 @@ pip install matplotlib numpy pandas
 Third‑Party Software
 The benchmarking scripts in this repository use the following software. Please ensure they are installed before running the tests:
 
--amap:
-    --https://github.com/Annabel-LS/LAI-benchmark/releases/tag/1.6
-
--flare:
-    --https://faculty.washington.edu/browning/flare.jar.
-
--salai‑net:
-    --https://github.com/AI-sandbox/SALAI-Net.git.
-
--rfmix:
-    --https://github.com/slowkoni/rfmix.
-
--ancestryView213:
-    --https://github.com/Annabel-LS/LAI-benchmark/releases/tag/2.13_1.4.0
+- [aMAP](https://github.com/Annabel-LS/LAI-benchmark/releases/tag/1.6)
+- [flare](https://faculty.washington.edu/browning/flare.jar)
+- [SALAI-Net](https://github.com/AI-sandbox/SALAI-Net.git)
+- [rfmix](https://github.com/slowkoni/rfmix)
+- [AncestryView213](https://github.com/Annabel-LS/LAI-benchmark/releases/tag/2.13_1.4.0)
 
 Refer to each software’s official documentation for installation instructions.
 
